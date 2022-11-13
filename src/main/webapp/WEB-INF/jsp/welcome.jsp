@@ -6,21 +6,21 @@
 <!-- %@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %-->  
 
 <petclinic:layout pageName="home">
-    <h2><fmt:message key="welcome"/></h2>
+    <h2>Bienvenido</h2>
     <div class="row">
-        <h2>Proyecto ${title}</h2>
-        <p><h2>Grupo ${group}</h2></p>
-        <p><ul>
-            <c:forEach items="${persons}" var="persona">
-                <li>${persona.firstName} ${persona.lastName}</li>
-            </c:forEach>
-        </ul></p>
-    </div>
+        <div class="col-md-8">
+            <h2>Proyecto ${title}</h2>
+            <p><h2>Grupo ${group}</h2></p>
+            <p><ul>
+                <c:forEach items="${persons}" var="persona">
+                    <li>${persona.firstName} ${persona.lastName}</li>
+                </c:forEach>
+            </ul></p>
+        </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <spring:url value="/resources/images/pets.png" htmlEscape="true" var="petsImage"/>
-            <img class="img-responsive" src="${petsImage}"/>
+        <div class="col-md-4">
+            <img class="img-responsive" src="/resources/images/Drip_Goku.jpg"/>
         </div>
     </div>
+
 </petclinic:layout>
